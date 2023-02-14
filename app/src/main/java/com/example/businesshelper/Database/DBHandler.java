@@ -1,10 +1,13 @@
 package com.example.businesshelper.Database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
+import com.example.businesshelper.Modal.Product;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -131,5 +134,20 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(DROP_TABLE_SALES);
         onCreate(db);
 
+    }
+
+    public void addProduct(Product product){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues  = new ContentValues();
+
+        contentValues.put(PRODUCT_NAME, product.getProduct_name());
+        contentValues.put(PRODUCT_DESCRIPTION,product.getProduct_description());
+        contentValues.put(PRODUCT_PRICE, product.getProduct_price());
+        contentValues.put(PRODUCT_QTY, product.getProduct_qty());
+        contentValues.put(PRODUCT_CATEGORY, product.getProduct_category());
+        contentValues.put(PRODUCT_STATUS, product.getProduct_status());
+        contentValues.put(PRODUCT_INSDATE,currentDateandTime);
+
+        db.insert(PRODUCT_TABLE_NAME,null,contentValues);
     }
 }
