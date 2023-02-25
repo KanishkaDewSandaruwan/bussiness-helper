@@ -12,6 +12,42 @@
         android:theme="@style/Theme.BusinessHelper.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".Profit"
+            android:exported="false" />
+        <activity
+            android:name=".SalesList"
+            android:exported="false" />
+        <activity
+            android:name=".AddToCart"
+            android:exported="false" />
+        <activity
+            android:name=".SalesCart"
+            android:exported="false" />
+        <activity
+            android:name=".SalesMain"
+            android:exported="false" />
+        <activity
+            android:name=".ExpensesDetails"
+            android:exported="false" />
+        <activity
+            android:name=".EditExpenses"
+            android:exported="false" />
+        <activity
+            android:name=".AddExpenses"
+            android:exported="false" />
+        <activity
+            android:name=".Expenses"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetails"
+            android:exported="false" />
+        <activity
+            android:name=".EditProduct"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddProduct"
+            android:exported="false" />
+        <activity
             android:name=".Activity.Start_menu"
             android:exported="false">
             <meta-data

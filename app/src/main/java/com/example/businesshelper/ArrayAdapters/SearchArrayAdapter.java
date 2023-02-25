@@ -14,13 +14,13 @@ import com.example.businesshelper.R;
 
 import java.util.List;
 
-public class ProductArrayAdapter extends ArrayAdapter<Product> {
+public class SearchArrayAdapter extends ArrayAdapter<Product> {
 
     Context context;
     int resource;
     List<Product> productList;
 
-    public ProductArrayAdapter(@NonNull Context context, int resource, List<Product> productList) {
+    public SearchArrayAdapter(@NonNull Context context, int resource, List<Product> productList) {
         super(context, resource, productList);
         this.context = context;
         this.resource = resource;

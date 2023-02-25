@@ -16,4 +16,12 @@
     <style name="Theme.BusinessHelper.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.BusinessHelper.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.BusinessHelper.NoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.BusinessHelper.NoActionBar.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.BusinessHelper.NoActionBar.PopupOverlay"
+        parent="ThemeOverlay.AppCompat.Light" />
 </resources>

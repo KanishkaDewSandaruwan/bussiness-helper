@@ -7,32 +7,29 @@ public class Product {
     private String product_description;
     private int product_price;
     private int product_qty;
-    private int product_category;
+
     private int product_status;
     private String product_insert_date;
 
     public Product() {
     }
 
-    public Product(String product_name, String product_description, int product_price, int product_qty, int product_category, int product_status, String product_insert_date) {
-        this.product_name = product_name;
-        this.product_description = product_description;
-        this.product_price = product_price;
-        this.product_qty = product_qty;
-        this.product_category = product_category;
-        this.product_status = product_status;
-        this.product_insert_date = product_insert_date;
-    }
-
-    public Product(int pid, String product_name, String product_description, int product_price, int product_qty, int product_category, int product_status, String product_insert_date) {
+    public Product(int pid, String product_name, String product_description, int product_price, int product_qty, int product_status, String product_insert_date) {
         this.pid = pid;
         this.product_name = product_name;
         this.product_description = product_description;
         this.product_price = product_price;
         this.product_qty = product_qty;
-        this.product_category = product_category;
         this.product_status = product_status;
         this.product_insert_date = product_insert_date;
+    }
+
+    public Product(String product_name, String product_description, int product_price, int product_qty, int product_status) {
+        this.product_name = product_name;
+        this.product_description = product_description;
+        this.product_price = product_price;
+        this.product_qty = product_qty;
+        this.product_status = product_status;
     }
 
     public int getPid() {
@@ -73,14 +70,6 @@ public class Product {
 
     public void setProduct_qty(int product_qty) {
         this.product_qty = product_qty;
-    }
-
-    public int getProduct_category() {
-        return product_category;
-    }
-
-    public void setProduct_category(int product_category) {
-        this.product_category = product_category;
     }
 
     public int getProduct_status() {

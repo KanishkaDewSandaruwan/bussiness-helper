@@ -9,18 +9,18 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.businesshelper.Modal.Product;
+import com.example.businesshelper.Modal.ProductCart;
 import com.example.businesshelper.R;
 
 import java.util.List;
 
-public class ProductArrayAdapter extends ArrayAdapter<Product> {
+public class ProductCartArrayAdapter extends ArrayAdapter<ProductCart> {
 
     Context context;
     int resource;
-    List<Product> productList;
+    List<ProductCart> productList;
 
-    public ProductArrayAdapter(@NonNull Context context, int resource, List<Product> productList) {
+    public ProductCartArrayAdapter(@NonNull Context context, int resource, List<ProductCart> productList) {
         super(context, resource, productList);
         this.context = context;
         this.resource = resource;
@@ -34,21 +34,16 @@ public class ProductArrayAdapter extends ArrayAdapter<Product> {
         View row = inflater.inflate(resource,parent,false);
 
 
-        TextView p_id = row.findViewById(R.id.p_id);
-        TextView p_name = row.findViewById(R.id.p_name);
-        TextView p_price = row.findViewById(R.id.p_price);
-        TextView p_status = row.findViewById(R.id.p_status);
+        TextView name = row.findViewById(R.id.textCartProductName);
+        TextView price = row.findViewById(R.id.textCartProductPrice);
+        TextView qty = row.findViewById(R.id.textCartQty);
 
-        Product product = productList.get(position);
 
-        p_id.setText(String.valueOf(product.getPid()));
-        p_name.setText(product.getProduct_name());
-        p_price.setText("Rs. " + String.valueOf(product.getProduct_price()));
-        if(product.getProduct_status() == 0){
-            p_status.setText("Deactived");
-        }else{
-            p_status.setText("Activated");
-        }
+        ProductCart productCart = productList.get(position);
+
+        name.setText(String.valueOf(productCart.getCart_pname()));
+        price.setText("Rs. " + String.valueOf(productCart.getCart_pprice()));
+        qty.setText(String.valueOf(productCart.getCart_pqty()));
 
         return row;
     }
